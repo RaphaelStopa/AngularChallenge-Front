@@ -1,22 +1,15 @@
 <div class="wrapper">
   <div id="formContent">
-    <!-- Tabs Titles -->
     <h2 class="active" [routerLink]="['/login']"> Sign In </h2>
     <h2 class="inactive underlineHover" [routerLink]="['/create-account']">Sign Up </h2>
-
-    <!-- Icon -->
     <div class="fadeIn">
       <img src="../../../assets/img/icon.png" id="icon" alt="User Icon" />
     </div>
-
-    <!-- Login Form -->
     <form (ngSubmit)="onSubmit()" #form="ngForm">
-      <input type="text" id="login" class="fadeIn" name="login" placeholder="login" [(ngModel)]="login.user" required>
-      <input type="text" id="password" class="fadeIn" name="login" placeholder="password" [(ngModel)]="login.password" required>
+      <input type="text" id="username" class="fadeIn" name="username" placeholder="login" [(ngModel)]="login.username" required>
+      <input type="text" id="password" class="fadeIn" name="password" placeholder="password" [(ngModel)]="login.password" required>
       <input type="submit" class="fadeIn" value="Log In" [disabled]="form.form.invalid">
     </form>
-
-    <!-- Remind Passowrd -->
     <div id="formFooter">
       <a class="underlineHover" href="#">Esqueceu a senha?</a>
     </div>
