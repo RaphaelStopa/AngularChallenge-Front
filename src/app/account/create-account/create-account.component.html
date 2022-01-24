@@ -1,19 +1,15 @@
 <div class="wrapper fadeInDown">
   <div id="formContent">
-    <!-- Tabs Titles -->
     <h2 class="inactive underlineHover" [routerLink]="['/login']"> Sign In </h2>
     <h2 class="active" [routerLink]="['/create-account']">Sign Up </h2>
-
-    <!-- Icon -->
-    <div class="fadeIn first">
+    <div class="fadeIn">
       <img src="../../../assets/img/icon.png" id="icon" alt="User Icon" />
     </div>
-
-    <!-- Login Form -->
     <form (ngSubmit)="onSubmit()" #form="ngForm">
-      <input type="text" id="login" class="fadeIn" name="login" placeholder="login" [(ngModel)]="account.login" required>
+      <input type="text" id="login" class="fadeIn" name="login" placeholder="Nome do login" [(ngModel)]="account.login" required>
+      <input type="text" id="cpf" class="fadeIn" name="cpf" placeholder="Nome do CPF" [(ngModel)]="account.cpf" required>
       <input type="text" id="emial" class="fadeIn" name="emial" placeholder="emial" [(ngModel)]="account.email" required>
-      <input type="text" id="password" class="fadeIn" name="login" placeholder="password" [(ngModel)]="account.password" required>
+      <input type="text" id="password" class="fadeIn" name="password" placeholder="password" [(ngModel)]="account.password" required>
       <input type="submit" class="fadeIn" value="Cadrastrar" [disabled]="form.form.invalid">
     </form>
 

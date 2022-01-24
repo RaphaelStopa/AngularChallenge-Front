@@ -10,6 +10,7 @@ export class CreateAccountComponent implements OnInit {
 
   account ={
     login:'',
+    cpf: '',
     email:'',
     password: ''
   }
