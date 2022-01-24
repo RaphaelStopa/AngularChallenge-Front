@@ -1,0 +1,12 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #a8e2ff;
+}
+
+html, body {
+  height: 100%;
+}
+
+
