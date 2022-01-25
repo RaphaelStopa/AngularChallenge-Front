@@ -1,17 +1,17 @@
 <div class="master">
 <div class="add">
 <button class="btn2" [routerLink]="['/add-produtos']">Adicionar produtos</button>
-<div *ngIf="politicst">
+<div *ngIf="products">
  <div class="geral">
- <div class="container" *ngFor="let political of politicst">
+ <div class="container" *ngFor="let  product of products">
   <div class="card">
     <img src="../../assets/img/img_avatar.png" alt="Person" class="card__image">
-    <p class="card__name"><b> {{political.name}}</b></p>
-    <p class="card__name" *ngIf="political.description.length < 130">{{political.description}}</p>
-    <p class="card__name" *ngIf="political.description.length > 130" velue="dddd">{{political.description.substr(0, 130)}}...</p>
-    <p class="card__name">Medido em: <b>{{political.unitMeasurement == 'OTHER' ? 'Outro' : political.unitMeasurement}}</b>.</p>
-    <p class="card__name">São <b>{{political.quantityStock}}</b> em estoque.</p>
-    <p class="card__name">Por apenas: <b>{{political.unitPrice}}</b>.</p>
+    <p class="card__name"><b> {{product.name}}</b></p>
+    <p class="card__name" *ngIf="product.description.length < 130">{{product.description}}</p>
+    <p class="card__name" *ngIf="product.description.length > 130" velue="dddd">{{product.description.substr(0, 130)}}...</p>
+    <p class="card__name">Medido em: <b>{{product.unitMeasurement == 'OTHER' ? 'Outro' : product.unitMeasurement}}</b>.</p>
+    <p class="card__name">São <b>{{product.quantityStock}}</b> em estoque.</p>
+    <p class="card__name">Por apenas: <b>{{product.unitPrice}}</b>.</p>
     <div class="grid-container">
     </div>
     <!-- <button class="btn draw-border" (click)="deleteProduct(political.id)">Adicionar ao carrinho</button> -->
@@ -19,7 +19,7 @@
 </div>
 </div>
 </div>
-<div *ngIf="!politicst">
+<div *ngIf="! products">
   Nem um produto cadastrado até o momento.
  </div>
 </div>

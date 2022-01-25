@@ -39,3 +39,25 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div> -->
+
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Total do item</th>
+            <th>Excluir</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let  purchase of purchaseItems">
+            <td>{{purchase.product.name}}</td>
+            <td>{{purchase.productQuantity}}</td>
+            <td>{{purchase.totalPrice}}</td>
+            <td><button (click)="deleteProduct(purchase.product.id)">Excluir</button></td>
+        </tr>
+        <tbody>
+    </table>
+</div>

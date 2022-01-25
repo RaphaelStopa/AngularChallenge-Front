@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./product.component.css']
 })
 export class PoliticalComponent implements OnInit {
-  politicst: Product[];
+  products: Product[];
 
 
   constructor(public productService: ProductService,  private router: Router,) { }
 
   ngOnInit(): void {
     this.productService.getAll().subscribe((data) => {
-      this.politicst = data;
+      this.products= data;
     })
   }
 

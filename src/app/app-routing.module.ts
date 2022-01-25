@@ -6,7 +6,7 @@ import { AuthGuard } from './account/shared/auth.guard';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { LoginComponent } from './account/login/login.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [

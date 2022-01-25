@@ -1,6 +1,7 @@
-import { Product } from './../../shared/model/product.model';
+import { PurchaseItemService } from './../../shared/service/purchase-item.service';
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/shared/service/product.service';
+import { PurchaseItem } from 'src/app/shared/model/purchese-item.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-purchase-item',
@@ -9,14 +10,24 @@ import { ProductService } from 'src/app/shared/service/product.service';
 })
 export class PurchaseItemComponent implements OnInit {
 
-  products: Product[]
-  displayedColumns = ['id', 'name', 'price', 'action']
-  constructor(private productService: ProductService) { }
+  purchaseItems: PurchaseItem[]
+
+  constructor(private purchaseItemService: PurchaseItemService, private router: Router) { }
 
   ngOnInit(): void {
-    this.productService.getAll().subscribe((data) => {
-      this.products = data;
+    this.purchaseItemService.getAll().subscribe((data) => {
+      this.purchaseItems = data;
     })
+  }
+
+  deleteProduct(id: number): void {
+    this.purchaseItemService.delete(id).subscribe(() => {
+      // this.productService.showMessage("Produto excluido com sucesso!");
+
+
+    }
+    );
+    this.router.navigate(["/carrinho"]);
   }
 
 }
