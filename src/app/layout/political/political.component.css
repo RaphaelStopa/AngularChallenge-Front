@@ -17,6 +17,10 @@
   background-color: white;
 }
 
+b{
+  background-color: rgba(0,0,0,0.0);
+}
+
 .container {
   width: 300px;
   grid-gap: 50px;
@@ -62,7 +66,27 @@
 }
 
 .btn {
+  position: absolute;
+  margin-top: 600px;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 0.75em 2em;
+  letter-spacing: 0.05rem;
+  /* margin: 0.35em; */
+  width: 13rem;
+  color: #ffffff;
+  background-color: rgba(0, 136, 169, 0.8);
+  padding: 9px 25px;
+  border-radius: 5px;
+  height: 55px;
+  justify-items: baseline;
+}
 
+.btn2 {
+  /* position: absolute;
+  margin-top: 600px; */
   border: none;
   cursor: pointer;
   line-height: 1.5;
@@ -73,10 +97,10 @@
   width: 13rem;
   color: #ffffff;
   background-color: rgba(0, 136, 169, 0.8);
-  transition: all 0.5s ease 0s;
   padding: 9px 25px;
   border-radius: 5px;
   height: 55px;
+  justify-items: baseline;
 }
 
 

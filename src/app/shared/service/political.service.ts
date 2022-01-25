@@ -1,3 +1,4 @@
+import { Product } from './../model/product.model';
 import { ResponsePageablePolitical } from './../model/responsePageablePolitical.model';
 import { Political } from './../model/political.model';
 import { HttpClient } from '@angular/common/http';
@@ -12,9 +13,9 @@ import { environment } from 'src/environments/environment.prod';
 export class PoliticalService {
   constructor( private httpClient: HttpClient) { }
 
-  public getAll(): Observable<ResponsePageablePolitical> {
+  public getAll(): Observable<Product[]> {
 
-    return this.httpClient.get<ResponsePageablePolitical>(`${environment.api}/politicians`);
+    return this.httpClient.get<Product[]>(`${environment.api}/products`);
 
   }
 

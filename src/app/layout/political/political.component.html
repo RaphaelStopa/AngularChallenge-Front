@@ -1,27 +1,32 @@
 <div class="master">
 <div class="add">
-<button class="btn draw-border" [routerLink]="['/add-politico']">Adicionar politicos</button>
-</div>
+<button class="btn2" [routerLink]="['/add-produtos']">Adicionar produtos</button>
+<div *ngIf="politicst">
  <div class="geral">
  <div class="container" *ngFor="let political of politicst">
   <div class="card">
     <img src="../../assets/img/img_avatar.png" alt="Person" class="card__image">
-    <p class="card__name">Nome: {{political.name}}</p>
-    <p class="card__name">Cargo: {{political.electivePositionType}}</p>
-    <p class="card__name"   *ngIf="!political.politicalParty" >Sem partido</p>
-    <p class="card__name" *ngIf="political.politicalParty.name.length < 35">{{political.politicalParty.name}} - {{political.politicalParty.acronym}}</p>
-    <p class="card__name" style="font-size: 1em;" *ngIf="political.politicalParty.name.length  > 35">{{political.politicalParty.name}} - {{political.politicalParty.acronym}}</p>
+    <p class="card__name"><b> {{political.name}}</b></p>
+    <p class="card__name" *ngIf="political.description.length < 130">{{political.description}}</p>
+    <p class="card__name" *ngIf="political.description.length > 130" velue="dddd">{{political.description.substr(0, 130)}}...</p>
+    <p class="card__name">Medido em: <b>{{political.unitMeasurement == 'OTHER' ? 'Outro' : political.unitMeasurement}}.</b></p>
+    <p class="card__name">São <b>{{political.quantityStock}}</b> em estoque.</p>
+    <p class="card__name">Por apenas: <b>{{political.unitPrice}}.</b></p>
     <div class="grid-container">
     </div>
-    <button class="btn draw-border">Processos</button>
-    <button class="btn draw-border">Projetos</button>
-    <button class="btn draw-border">Informações Gerais</button>
-    <button class="btn draw-border" routerLink="/edit-politico/{{political.id}}">Editar</button>
-    <button class="btn draw-border" (click)="deleteProduct(political.id)">Excluir</button>
+    <button class="btn draw-border" (click)="deleteProduct(political.id)">Adicionar ao carrinho</button>
   </div>
 </div>
 </div>
 </div>
+
+<div *ngIf="!politicst">
+  Nem um produto cadastrado até o momento.
+ </div>
+</div>
+</div >
+
+
 
 // tinha que ter um codigo aqio que fa z verificaoa do if se nao da um pequeno estouro
 

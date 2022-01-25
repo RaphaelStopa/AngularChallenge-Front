@@ -14,8 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path:'', component: BaseComponent, children:[
-    {path: '', component: HomeComponent},
-    {path: 'politico', component: PoliticalComponent},
+    {path: '', component: PoliticalComponent},
     {path: 'add-politico', component: AddPoliticalComponent},
     {path: 'edit-politico/:id', component: EditPoliticalComponent},
     {path: 'partido', component: PoliticalPartyComponent},
