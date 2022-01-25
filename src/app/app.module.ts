@@ -17,6 +17,7 @@ import { BaseComponent } from './layout/base/base.component';
 import { AddPoliticalComponent } from './layout/add-political/add-political.component';
 import { PoliticalPartyComponent } from './layout/politicalParty/political-party.component';
 import { EditPoliticalComponent } from './layout/edit-political/edit-political.component';
+import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { EditPoliticalComponent } from './layout/edit-political/edit-political.c
     BaseComponent,
     AddPoliticalComponent,
     PoliticalPartyComponent,
-    EditPoliticalComponent
+    EditPoliticalComponent,
+    PurchaseItemComponent
   ],
   imports: [
     BrowserModule,

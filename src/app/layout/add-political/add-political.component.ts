@@ -9,14 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPoliticalComponent implements OnInit {
 
-
-  selecionado = false;
-
   political ={
     name:'',
-    cpf:'',
-    electivePositionType: '',
-    isLeader: this.selecionado
+    description:'',
+    unitPrice:'',
+    quantityStock:'',
+    unitMeasurement:'',
+    photo:''
   }
 
 

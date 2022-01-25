@@ -14,9 +14,7 @@ export class PoliticalService {
   constructor( private httpClient: HttpClient) { }
 
   public getAll(): Observable<Product[]> {
-
     return this.httpClient.get<Product[]>(`${environment.api}/products`);
-
   }
 
   readById(id: number): Observable<Political> {
@@ -34,7 +32,7 @@ export class PoliticalService {
   }
 
   async create(political: any) {
-    const result = await this.httpClient.post<any>(`${environment.api}/politicians`, political).toPromise();
+    const result = await this.httpClient.post<any>(`${environment.api}/products`, political).toPromise();
     return result;
   }
 

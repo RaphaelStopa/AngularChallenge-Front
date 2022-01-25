@@ -1,3 +1,4 @@
+import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.component';
 import { EditPoliticalComponent } from './layout/edit-political/edit-political.component';
 import { PoliticalPartyComponent } from './layout/politicalParty/political-party.component';
 
@@ -15,9 +16,9 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:'', component: BaseComponent, children:[
     {path: '', component: PoliticalComponent},
-    {path: 'add-politico', component: AddPoliticalComponent},
+    {path: 'add-produtos', component: AddPoliticalComponent},
     {path: 'edit-politico/:id', component: EditPoliticalComponent},
-    {path: 'partido', component: PoliticalPartyComponent},
+    {path: 'carrinho', component: PurchaseItemComponent},
 
   ],
   canActivate: [AuthGuard]},

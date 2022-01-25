@@ -18,9 +18,6 @@ export class PoliticalComponent implements OnInit {
   ngOnInit(): void {
     this.politicalService.getAll().subscribe((data) => {
       this.politicst = data;
-      console.log("aqui")
-      console.log(data);
-
     })
   }
   image(photo: string) {
@@ -29,17 +26,9 @@ export class PoliticalComponent implements OnInit {
     return image
   }
 
-  // //dapa apagar
-  // getPolitics() {
-  //   this.politicalService.getAll().subscribe((data) => {
-  //     this.politicst = data.content;
-  //   })
-  // }
-
   deleteProduct(id: number): void {
     this.politicalService.delete(id).subscribe(() => {
       this.router.navigate(["/politico"]);
     });
   }
-
 }
