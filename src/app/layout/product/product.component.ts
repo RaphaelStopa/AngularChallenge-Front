@@ -1,12 +1,12 @@
-import { Product } from './../../shared/model/product.model';
+import { Product } from '../../shared/model/product.model';
 import { ProductService } from '../../shared/service/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-political',
-  templateUrl: './political.component.html',
-  styleUrls: ['./political.component.css']
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
 })
 export class PoliticalComponent implements OnInit {
   politicst: Product[];

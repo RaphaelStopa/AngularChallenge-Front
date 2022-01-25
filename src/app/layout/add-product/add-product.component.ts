@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/shared/service/product.service';
 
 @Component({
-  selector: 'app-add-political',
-  templateUrl: './add-political.component.html',
-  styleUrls: ['./add-political.component.css']
+  selector: 'app-add-product',
+  templateUrl: './add-product.component.html',
+  styleUrls: ['./add-product.component.css']
 })
-export class AddPoliticalComponent implements OnInit {
+export class AddProductComponent implements OnInit {
 
   product ={
     name:'',

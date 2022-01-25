@@ -1,9 +1,7 @@
+import { AddProductComponent } from './layout/add-product/add-product.component';
 import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.component';
-
-
-import { AddPoliticalComponent } from './layout/add-political/add-political.component';
 import { BaseComponent } from './layout/base/base.component';
-import { PoliticalComponent } from './layout/political/political.component';
+import { PoliticalComponent } from './layout/product/product.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { LoginComponent } from './account/login/login.component';
@@ -14,7 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:'', component: BaseComponent, children:[
     {path: '', component: PoliticalComponent},
-    {path: 'add-produtos', component: AddPoliticalComponent},
+    {path: 'add-produtos', component: AddProductComponent},
     // {path: 'edit-politico/:id', component: EditPoliticalComponent},
     {path: 'carrinho', component: PurchaseItemComponent},
 
