@@ -12,7 +12,7 @@ export class PurchaseItemService {
   constructor(private httpClient: HttpClient) { }
 
   public getAll(): Observable<PurchaseItem[]> {
-    return this.httpClient.get<PurchaseItem[]>(`${environment.api}/purchase-items`);
+    return this.httpClient.get<PurchaseItem[]>(`${environment.api}/purchase-items-by-user`);
   }
 
   delete(id: number): Observable<PurchaseItem> {
