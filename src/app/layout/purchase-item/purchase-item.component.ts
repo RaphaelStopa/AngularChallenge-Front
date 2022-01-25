@@ -1,6 +1,6 @@
 import { Product } from './../../shared/model/product.model';
 import { Component, OnInit } from '@angular/core';
-import { PoliticalService } from 'src/app/shared/service/political.service';
+import { ProductService } from 'src/app/shared/service/product.service';
 
 @Component({
   selector: 'app-purchase-item',
@@ -11,10 +11,10 @@ export class PurchaseItemComponent implements OnInit {
 
   products: Product[]
   displayedColumns = ['id', 'name', 'price', 'action']
-  constructor(private politicalService: PoliticalService) { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.politicalService.getAll().subscribe((data) => {
+    this.productService.getAll().subscribe((data) => {
       this.products = data;
     })
   }

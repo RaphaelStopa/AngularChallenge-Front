@@ -5,12 +5,12 @@
 
     <!-- Login Form -->
     <form  (ngSubmit)="onSubmit()" #form="ngForm">
-      <input type="text" id="name" class="fadeIn" name="name" placeholder="nome"  [(ngModel)]="political.name" required>
-      <input type="text" id="descrição" class="fadeIn" name="descrição" placeholder="descrição" [(ngModel)]="political.description" required>
-      <input type="text" id="preço unitário" class="fadeIn" name="preço unitário" placeholder="preço unitário" [(ngModel)]="political.unitPrice" required>
-      <input type="text" id="descrição" class="fadeIn" name="descrição" placeholder="preço unitário" [(ngModel)]="political.quantityStock" required>
+      <input type="text" id="name" class="fadeIn" name="name" placeholder="nome"  [(ngModel)]="product.name" required>
+      <input type="text" id="descrição" class="fadeIn" name="descrição" placeholder="descrição" [(ngModel)]="product.description" required>
+      <input type="text" id="preço unitário" class="fadeIn" name="preço unitário" placeholder="preço unitário" [(ngModel)]="product.unitPrice" required>
+      <input type="text" id="descrição" class="fadeIn" name="descrição" placeholder="preço unitário" [(ngModel)]="product.quantityStock" required>
 
-      <select name="cars" id="cars" [(ngModel)]="political.unitMeasurement">
+      <select name="cars" id="cars" [(ngModel)]="product.unitMeasurement">
         <option value="KG">Quilo</option>
         <option value="L">Litro</option>
         <option value="M2">Metro quadrado</option>
