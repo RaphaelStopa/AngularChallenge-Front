@@ -6,4 +6,5 @@ export class Product {
   quantityStock: number;
   unitMeasurement: string;
   photo: string;
+  quantity: number
 }

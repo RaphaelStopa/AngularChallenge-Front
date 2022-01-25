@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+
+select{
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  margin-bottom: 15px;
+
+}
+#title{
+  margin-top: 12px;
+  background-color: rgb(245, 245, 245);
+}
+
 a {
   color: #92badd;
   display:inline-block;

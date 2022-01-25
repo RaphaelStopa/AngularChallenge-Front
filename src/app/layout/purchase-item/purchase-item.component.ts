@@ -20,14 +20,12 @@ export class PurchaseItemComponent implements OnInit {
     })
   }
 
-  deleteProduct(id: number): void {
-    this.purchaseItemService.delete(id).subscribe(() => {
-      // this.productService.showMessage("Produto excluido com sucesso!");
-
-
+  deleteProduct(id: number): void{
+    try{
+      this.purchaseItemService.delete(id).subscribe()
+      location.reload();
+    } catch (error) {
+      alert("Parece que houve um erro.");
     }
-    );
-    this.router.navigate(["/carrinho"]);
   }
-
 }

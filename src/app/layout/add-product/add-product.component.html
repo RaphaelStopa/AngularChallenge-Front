@@ -10,7 +10,8 @@
       <input type="text" id="preço unitário" class="fadeIn" name="preço unitário" placeholder="preço unitário" [(ngModel)]="product.unitPrice" required>
       <input type="text" id="descrição" class="fadeIn" name="descrição" placeholder="preço unitário" [(ngModel)]="product.quantityStock" required>
 
-      <select name="cars" id="cars" [(ngModel)]="product.unitMeasurement">
+      <div id="title">Selecione a unidade de medida:</div>
+      <select name="cars" id="cars" [(ngModel)]="product.unitMeasurement" required>
         <option value="KG">Quilo</option>
         <option value="L">Litro</option>
         <option value="M2">Metro quadrado</option>

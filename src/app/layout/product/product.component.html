@@ -7,14 +7,15 @@
   <div class="card">
     <img src="../../assets/img/img_avatar.png" alt="Person" class="card__image">
     <p class="card__name"><b> {{product.name}}</b></p>
-    <p class="card__name" *ngIf="product.description.length < 130">{{product.description}}</p>
-    <p class="card__name" *ngIf="product.description.length > 130" velue="dddd">{{product.description.substr(0, 130)}}...</p>
+    <p class="card__name" *ngIf="product.description.length < 80">{{product.description}}</p>
+    <p class="card__name" *ngIf="product.description.length > 80" velue="dddd">{{product.description.substr(0, 80)}}...</p>
     <p class="card__name">Medido em: <b>{{product.unitMeasurement == 'OTHER' ? 'Outro' : product.unitMeasurement}}</b>.</p>
     <p class="card__name">São <b>{{product.quantityStock}}</b> em estoque.</p>
     <p class="card__name">Por apenas: <b>{{product.unitPrice}}</b>.</p>
     <div class="grid-container">
     </div>
-    <!-- <button class="btn draw-border" (click)="deleteProduct(political.id)">Adicionar ao carrinho</button> -->
+    <p class="card__name">Digite a quantidade que deseja: <input type="number" id="quantity" name="quantity" min="1" max={{product.quantityStock}} [(ngModel)]="product.quantity"></p>
+    <button class="btn draw-border" (click)="addProductItem(product.quantity, product)">Adicionar ao carrinho</button>
   </div>
 </div>
 </div>
@@ -24,5 +25,7 @@
  </div>
 </div>
 </div >
+
+
 
 

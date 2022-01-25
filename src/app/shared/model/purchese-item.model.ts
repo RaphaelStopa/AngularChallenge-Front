@@ -3,7 +3,6 @@ import { Product } from './product.model';
 import { User } from './user.model';
 export class PurchaseItem {
   id: number;
-  isFinished: boolean;
   productQuantity: number;
   totalPrice: number;
   user: User;

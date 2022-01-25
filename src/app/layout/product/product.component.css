@@ -2,6 +2,7 @@
 
  @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
 
+
 .geral{
   background-color: white;
   display: flex;
@@ -17,8 +18,16 @@
   background-color: white;
 }
 
+
+
 b{
   background-color: rgba(0,0,0,0.0);
+}
+
+input{
+ border: none;
+ width: 80px;
+ height: 30px;
 }
 
 .container {
