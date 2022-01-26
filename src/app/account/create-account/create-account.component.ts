@@ -16,14 +16,14 @@ export class CreateAccountComponent implements OnInit {
     password: ''
   }
 
-  constructor(private AccountService: AccountService, private router: Router) { }
+  constructor(private accountService: AccountService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   async onSubmit() {
     try{
-      await this.AccountService.createAccount(this.account);
+      await this.accountService.createAccount(this.account);
       alert("Conta criada.");
       this.router.navigate(['/login']);
     }catch (error) {

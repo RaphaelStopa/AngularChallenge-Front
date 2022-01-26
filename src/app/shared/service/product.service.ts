@@ -15,8 +15,8 @@ export class ProductService {
     return this.httpClient.get<Product[]>(`${environment.api}/products`);
   }
 
-  async create(product: any) {
-    const result = await this.httpClient.post<any>(`${environment.api}/products`, product).subscribe();
+  create(product: any)  {
+    const result = this.httpClient.post<any>(`${environment.api}/products`, product).subscribe();
     return result;
   }
 }
