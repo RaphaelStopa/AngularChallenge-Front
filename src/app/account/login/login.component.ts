@@ -13,19 +13,20 @@ export class LoginComponent implements OnInit {
     password:''
   }
 
-  constructor(private AccountService: AccountService, private router: Router) { }
+  constructor(private accountService: AccountService, private router: Router) { }
 
   ngOnInit(): void {
+    this.accountService.access();
   }
 
   async onSubmit(){
     try{
-      console.log
-      const result = await this.AccountService.login(this.login);
+      this.accountService.login(this.login);
+      await new Promise(r => setTimeout(r, 2000));
       this.router.navigate(['']);
     } catch (error){
-      console.error(error);
+      console.log("ddddddddd")
+      // console.error(error);
     }
   }
-
 }

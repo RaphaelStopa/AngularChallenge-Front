@@ -2,25 +2,38 @@ import { environment } from './../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import jwtDecode from 'jwt-decode';
+import { Router } from '@angular/router';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
-  async login(user: any){
-
-  let token:string='Token!'
-  this.http.post(`${environment.api}/authenticate`, user, {withCredentials: true}).subscribe((json:any) => {
+  login(user: any){
+    let token: string='Token!'
+    this.http.post(`${environment.api}/authenticate`, user, {withCredentials: true}).subscribe((json:any) => {
     token = json['id_token'];
-   window.localStorage.setItem('token',token);
+    window.localStorage.setItem('token',token);
   })
   }
 
+  access() {
+    let token: string='Token!'
+    let expired;
+    try{
+      token = window.localStorage.getItem('token');
+      expired = this.isTokenExpired(token)
+     if(!expired) {
+      this.router.navigate(['']);
+     }
+    } catch(error) {
+    }
+  }
+
   async createAccount(account: any) {
-    const result = await this.http.post<any>(`${environment.api}/register`, account).toPromise();
+    const result = await this.http.post<any>(`${environment.api}/register`, account).subscribe();
     return result;
   }
 
