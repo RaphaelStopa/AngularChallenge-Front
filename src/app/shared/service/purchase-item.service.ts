@@ -33,11 +33,6 @@ export class PurchaseItemService {
     );
   }
 
-  // addPurchaseItem(id: number): Observable<PurchaseItem> {
-  //   const url = `${environment.api}/purchase-items`;
-  //   return this.httpClient.post<PurchaseItem>(url)
-  // }
-
   async addPurchaseItem(quantity: number, product: Product) {
     this.addPurchase.totalPrice =  product.unitPrice * quantity;
     this.addPurchase.productQuantity = quantity;

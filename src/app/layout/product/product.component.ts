@@ -1,5 +1,3 @@
-import { User } from './../../shared/model/user.model';
-import { Sale } from './../../shared/model/sale.model';
 import { PurchaseItemService } from './../../shared/service/purchase-item.service';
 import { Product } from '../../shared/model/product.model';
 import { ProductService } from '../../shared/service/product.service';
@@ -22,12 +20,6 @@ export class PoliticalComponent implements OnInit {
       this.products= data;
     })
   }
-
-  // image(photo: string) {
-  //   var image = new Image();
-  //   image.src = photo;
-  //   return image
-  // }
 
   addProductItem(quanti:number, product: Product): void {
     try{

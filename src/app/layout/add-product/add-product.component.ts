@@ -25,12 +25,12 @@ export class AddProductComponent implements OnInit {
 
   async onSubmit() {
     try{
-      const result = await this.productService.create(this.product);
+      await this.productService.create(this.product);
       alert("Produto criado.");
     }catch (error) {
       alert("Parece que houve um erro. Verifique os campos.");
       console.error(error);
   }
-
 }
+
 }

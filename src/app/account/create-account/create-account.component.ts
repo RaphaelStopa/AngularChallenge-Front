@@ -23,7 +23,7 @@ export class CreateAccountComponent implements OnInit {
 
   async onSubmit() {
     try{
-      const result = await this.AccountService.createAccount(this.account);
+      await this.AccountService.createAccount(this.account);
       alert("Conta criada.");
       this.router.navigate(['/login']);
     }catch (error) {

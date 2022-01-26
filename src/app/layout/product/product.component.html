@@ -5,7 +5,7 @@
  <div class="geral">
  <div class="container" *ngFor="let  product of products">
   <div class="card">
-    <img src="../../assets/img/img_avatar.png" alt="Person" class="card__image">
+    <img src="{{'data:image/jpg;base64,' + product.photo}}" alt="Person" class="card__image">
     <p class="card__name"><b> {{product.name}}</b></p>
     <p class="card__name" *ngIf="product.description.length < 80">{{product.description}}</p>
     <p class="card__name" *ngIf="product.description.length > 80" velue="dddd">{{product.description.substr(0, 80)}}...</p>

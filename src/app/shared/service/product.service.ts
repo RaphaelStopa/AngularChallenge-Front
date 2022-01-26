@@ -15,28 +15,8 @@ export class ProductService {
     return this.httpClient.get<Product[]>(`${environment.api}/products`);
   }
 
-  // readById(id: number): Observable<Political> {
-  //   const url = `${environment.api}/politicians/${id}`;
-  //   return this.httpClient.get<Political>(url).pipe(
-  //     map((obj) => obj)
-  //   );
-  // }
-
-  // delete(id: number): Observable<Political> {
-  //   const url = `${environment.api}/politicians/${id}`;
-  //   return this.httpClient.delete<Political>(url).pipe(
-  //     map((obj) => obj)
-  //   );
-  // }
-
   async create(product: any) {
-    const result = await this.httpClient.post<any>(`${environment.api}/products`, product).toPromise();
+    const result = await this.httpClient.post<any>(`${environment.api}/products`, product).subscribe();
     return result;
   }
-
-  // update(political: Political): Observable<Political> {
-  //   const url = `${environment.api}/politicians/${political.id}`;
-  //   return this.httpClient.patch<Political>(url, political)
-  // }
-
 }

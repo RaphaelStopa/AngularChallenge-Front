@@ -1,3 +1,4 @@
+import { SaleComponent } from './layout/sale/sale.component';
 import { AddProductComponent } from './layout/add-product/add-product.component';
 import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.component';
 import { BaseComponent } from './layout/base/base.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
     {path: '', component: PoliticalComponent},
     {path: 'add-produtos', component: AddProductComponent},
     // {path: 'edit-politico/:id', component: EditPoliticalComponent},
-    {path: 'carrinho', component: PurchaseItemComponent},
+    {path: 'carrinho', component: SaleComponent},
+    // {path: 'carrinho', component: PurchaseItemComponent},
 
   ],
   canActivate: [AuthGuard]},

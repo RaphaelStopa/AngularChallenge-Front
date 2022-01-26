@@ -1,3 +1,4 @@
+import { SaleService } from './../../shared/service/sale.service';
 import { PurchaseItemService } from './../../shared/service/purchase-item.service';
 import { Component, OnInit } from '@angular/core';
 import { PurchaseItem } from 'src/app/shared/model/purchese-item.model';
@@ -12,7 +13,7 @@ export class PurchaseItemComponent implements OnInit {
 
   purchaseItems: PurchaseItem[]
 
-  constructor(private purchaseItemService: PurchaseItemService, private router: Router) { }
+  constructor(private purchaseItemService: PurchaseItemService) { }
 
   ngOnInit(): void {
     this.purchaseItemService.getAll().subscribe((data) => {

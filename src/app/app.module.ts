@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { HttpInterceptorProviders } from './http-interceptors/';
 import { BaseComponent } from './layout/base/base.component';
 import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.component';
+import { SaleComponent } from './layout/sale/sale.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.comp
     AuthenticationComponent,
     BaseComponent,
     AddProductComponent,
-    PurchaseItemComponent
+    PurchaseItemComponent,
+    SaleComponent
   ],
   imports: [
     BrowserModule,

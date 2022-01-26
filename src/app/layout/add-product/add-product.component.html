@@ -10,6 +10,9 @@
       <input type="text" id="preço unitário" class="fadeIn" name="preço unitário" placeholder="preço unitário" [(ngModel)]="product.unitPrice" required>
       <input type="text" id="descrição" class="fadeIn" name="descrição" placeholder="preço unitário" [(ngModel)]="product.quantityStock" required>
 
+
+
+
       <div id="title">Selecione a unidade de medida:</div>
       <select name="cars" id="cars" [(ngModel)]="product.unitMeasurement" required>
         <option value="KG">Quilo</option>
@@ -18,6 +21,14 @@
         <option value="M3">Metro cubico</option>
         <option value="OTHER">Outro</option>
       </select>
+
+      <!-- <div>
+      <label for="img">Imagem:</label>
+      <input type="file" id="img" name="img" accept="image/*" [(ngModel)]="product.photo" >
+      </div> -->
+
+
+
 
       <!-- <input type="text" id="password" class="fadeIn" name="login" placeholder="partido"  required> -->
       <input type="submit" class="fadeIn" value="Cadrastrar" [disabled]="form.form.invalid">
