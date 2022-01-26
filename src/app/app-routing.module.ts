@@ -15,8 +15,8 @@ const routes: Routes = [
     {path: '', component: PoliticalComponent},
     {path: 'add-produtos', component: AddProductComponent},
     // {path: 'edit-politico/:id', component: EditPoliticalComponent},
-    {path: 'carrinho', component: SaleComponent},
-    // {path: 'carrinho', component: PurchaseItemComponent},
+    // {path: 'carrinho', component: SaleComponent},
+    {path: 'carrinho', component: PurchaseItemComponent},
 
   ],
   canActivate: [AuthGuard]},

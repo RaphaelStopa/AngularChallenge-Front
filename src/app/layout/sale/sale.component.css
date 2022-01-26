@@ -1,0 +1,29 @@
+*{
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn{
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background-color: rgb(230, 230, 230);
+  border: none
+}
+.cep{
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background-color: rgb(230, 230, 230);
+  border: none
+}
+p{
+  background-color: rgb(255, 191, 191);
+  text-align:center
+}

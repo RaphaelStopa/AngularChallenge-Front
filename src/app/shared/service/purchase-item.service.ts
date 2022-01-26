@@ -26,6 +26,7 @@ export class PurchaseItemService {
     return this.httpClient.get<PurchaseItem[]>(`${environment.api}/purchase-items-by-user`);
   }
 
+
   delete(id: number): Observable<PurchaseItem> {
     const url = `${environment.api}/purchase-items/${id}`;
     return this.httpClient.delete<PurchaseItem>(url).pipe(

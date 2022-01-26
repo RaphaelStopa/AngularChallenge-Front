@@ -13,13 +13,17 @@ export class PurchaseItemComponent implements OnInit {
 
   purchaseItems: PurchaseItem[]
 
+  totalValue: number
+
   constructor(private purchaseItemService: PurchaseItemService) { }
 
   ngOnInit(): void {
     this.purchaseItemService.getAll().subscribe((data) => {
       this.purchaseItems = data;
-    })
+    });
+
   }
+
 
   deleteProduct(id: number): void{
     try{

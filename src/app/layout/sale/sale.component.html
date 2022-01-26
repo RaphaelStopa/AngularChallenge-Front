@@ -1,5 +1,5 @@
 <form (ngSubmit)="onSubmit()" #form="ngForm">
-  <input type="text" id="CEP" class="fadeIn" name="CEP" placeholder="CEP"  required>
-  <input type="submit" class="fadeIn" value="Finalizar compra." >
-  [disabled]="form.form.invalid"
+  <p>Total: {{sale.value}}</p>
+  <input type="text" id="CEP" class="cep" name="CEP" placeholder="CEP" [(ngModel)]="sale.cep"  required>
+  <input type="submit" class="btn" value="Finalizar compra."  [disabled]="form.form.invalid" >
 </form>

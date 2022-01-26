@@ -1,9 +1,9 @@
-<div id="empty" *ngIf="purchaseItems.length === 0">
+<div id="empty" *ngIf="purchaseItems?.length === 0">
   O Carrinho esta vazio.
   </div>
 
 
-<div id="base" *ngIf="purchaseItems.length !== 0">
+<div id="base" *ngIf="purchaseItems?.length !== 0">
     <table class="fl-table">
         <thead>
         <tr>
@@ -22,5 +22,6 @@
         </tr>
         <tbody>
     </table>
+    <app-sale></app-sale>
 </div>
 

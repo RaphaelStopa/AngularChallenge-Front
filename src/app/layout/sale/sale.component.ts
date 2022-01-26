@@ -9,15 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaleComponent implements OnInit {
 
-  sale: Sale[]
+  sale= {
+    cep: '',
+    value: '',
+  }
+
 
   constructor(private saleService:SaleService) { }
 
   ngOnInit(): void {
-    this.saleService.getAll().subscribe((data) => {
-      this.sale= data;
-      console.log(this.sale)
-    })
+    this.saleService.getTotal().subscribe((data) => {
+      this.sale.value = data;
+    });
+
   }
 
   onSubmit(){
@@ -27,7 +31,5 @@ export class SaleComponent implements OnInit {
       console.error(error);
     }
   }
-
-
 
 }

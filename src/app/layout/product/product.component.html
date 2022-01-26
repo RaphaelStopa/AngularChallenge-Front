@@ -14,7 +14,7 @@
     <p class="card__name">Por apenas: <b>{{product.unitPrice}}</b>.</p>
     <div class="grid-container">
     </div>
-    <p class="card__name">Digite a quantidade que deseja: <input type="number" id="quantity" name="quantity" min="1" max={{product.quantityStock}} [(ngModel)]="product.quantity"></p>
+    <p class="card__name">Digite a quantidade que deseja: <input type="number" id="quantity" name="quantity" min="1" max={{product.quantityStock}} [(ngModel)]="product.quantity"  required ></p>
     <button class="btn draw-border" (click)="addProductItem(product.quantity, product)">Adicionar ao carrinho</button>
   </div>
 </div>
