@@ -4,23 +4,23 @@
 <div *ngIf="products">
  <div class="geral">
  <div class="container" *ngFor="let  product of products">
-  <div class="card">
+  <form class="card" #form="ngForm">
     <img src="{{'data:image/jpg;base64,' + product.photo}}" alt="Person" class="card__image">
-    <p class="card__name"><b> {{product.name}}</b></p>
+    <p class="card__name"><b> {{product.name | titlecase}}</b></p>
     <p class="card__name" *ngIf="product.description.length < 80">{{product.description}}</p>
     <p class="card__name" *ngIf="product.description.length > 80" velue="dddd">{{product.description.substr(0, 80)}}...</p>
     <p class="card__name">Medido em: <b>{{product.unitMeasurement == 'OTHER' ? 'Outro' : product.unitMeasurement}}</b>.</p>
     <p class="card__name">São <b>{{product.quantityStock}}</b> em estoque.</p>
-    <p class="card__name">Por apenas: <b>{{product.unitPrice}}</b>.</p>
+    <p class="card__name">Por apenas: <b>{{product.unitPrice | currency:'BRL'}}</b>.</p>
     <div class="grid-container">
     </div>
-    <p class="card__name">Digite a quantidade que deseja: <input type="number" id="quantity" name="quantity" min="1" max={{product.quantityStock}} [(ngModel)]="product.quantity"  required ></p>
-    <button class="btn draw-border" (click)="addProductItem(product.quantity, product)">Adicionar ao carrinho</button>
-  </div>
+    <p class="card__name">Digite a quantidade que deseja: <input type="number" id="quantity" name="quantity" min="1" max={{product.quantityStock}} [(ngModel)]="product.quantity" required ></p>
+    <button class="btn draw-border" (click)="addProductItem(product.quantity, product)" [disabled]="form.form.invalid">Adicionar ao carrinho</button>
+  </form >
 </div>
 </div>
 </div>
-<div *ngIf="! products">
+<div id="empty" *ngIf="!products">
   Nem um produto cadastrado até o momento.
  </div>
 </div>

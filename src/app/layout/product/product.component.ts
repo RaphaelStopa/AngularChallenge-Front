@@ -21,10 +21,11 @@ export class PoliticalComponent implements OnInit {
     })
   }
 
-  addProductItem(quanti:number, product: Product): void {
+  async addProductItem(quanti:number, product: Product) {
     try{
     this.purchaseItemService.addPurchaseItem(quanti, product);
-    alert("Produto adcionado ao carrinho.");
+    await new Promise(r => setTimeout(r, 1000));
+    this.router.navigate(['/carrinho']);
     } catch (error) {
       alert("Parece que houve um erro. Verifique o campo da quantidade.");
     }

@@ -26,7 +26,10 @@ b{
 
 input{
  border: none;
- width: 80px;
+ background-color: rgb(202, 202, 202);
+ border-radius: 5px;
+ text-align: center;
+ width: 100px;
  height: 30px;
 }
 
@@ -93,6 +96,28 @@ input{
   justify-items: baseline;
 }
 
+.btn:disabled {
+  position: absolute;
+  margin-top: 600px;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 0.75em 2em;
+  letter-spacing: 0.05rem;
+  /* margin: 0.35em; */
+  width: 13rem;
+  color: #ffffff;
+  background-color: #21343d28;
+  padding: 9px 25px;
+  border-radius: 5px;
+  height: 55px;
+  justify-items: baseline;
+}
+
+
+
+
 .btn2 {
   /* position: absolute;
   margin-top: 600px; */
@@ -112,11 +137,20 @@ input{
   justify-items: baseline;
 }
 
-
-
 .btn:hover {
   background-color: rgba(0, 174, 218, 0.8);
 }
+.btn:disabled:hover {
+  background-color: #21343d28;
+}
+
+#empty{
+  background-color: white;
+  text-align: center;
+}
+
+
+
 
 
 

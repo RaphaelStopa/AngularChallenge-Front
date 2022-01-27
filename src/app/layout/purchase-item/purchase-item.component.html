@@ -15,9 +15,9 @@
         </thead>
         <tbody>
         <tr *ngFor="let purchase of purchaseItems">
-            <td>{{purchase.product.name}}</td>
+            <td>{{purchase.product.name | titlecase}}</td>
             <td>{{purchase.productQuantity}}</td>
-            <td>{{purchase.totalPrice}}</td>
+            <td>{{purchase.totalPrice | currency:'BRL'}}</td>
             <td><button (click)="deleteProduct(this.purchase.id)">Excluir</button></td>
         </tr>
         <tbody>

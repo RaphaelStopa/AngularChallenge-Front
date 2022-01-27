@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -20,5 +20,14 @@ export class SaleService {
 
   public getTotal(): Observable<any> {
     return this.http.get<any>(`${environment.api}/sales-total`);
+  }
+
+  // public getValidateZipCode(code: string): Observable<any> {
+  //   return this.http.get<any>(`${environment.api}/sales-total/{code}`).subscribe();
+  // }
+
+   getValidateZipCode(code: string) {
+    const result = this.http.get<any>(`${environment.api}/sales-cep/${code}`);
+    return  result
   }
 }

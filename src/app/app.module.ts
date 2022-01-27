@@ -1,5 +1,5 @@
 import { AddProductComponent } from './layout/add-product/add-product.component';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,10 @@ import { HttpInterceptorProviders } from './http-interceptors/';
 import { BaseComponent } from './layout/base/base.component';
 import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.component';
 import { SaleComponent } from './layout/sale/sale.component';
+import { registerLocaleData } from '@angular/common';
+import ptBr from '@angular/common/locales/pt';
+registerLocaleData(ptBr)
+
 
 
 @NgModule({
@@ -35,7 +39,7 @@ import { SaleComponent } from './layout/sale/sale.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [HttpInterceptorProviders],
+  providers: [HttpInterceptorProviders, { provide: LOCALE_ID, useValue: 'pt' } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

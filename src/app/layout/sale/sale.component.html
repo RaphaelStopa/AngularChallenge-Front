@@ -1,5 +1,5 @@
 <form (ngSubmit)="onSubmit()" #form="ngForm">
-  <p>Total: {{sale.value}}</p>
+  <p>Total: {{sale.value | currency:'BRL'}}</p>
   <input type="text" id="CEP" class="cep" name="CEP" placeholder="CEP" [(ngModel)]="sale.cep"  required>
   <input type="submit" class="btn" value="Finalizar compra."  [disabled]="form.form.invalid" >
 </form>
