@@ -16,7 +16,10 @@ export class AccountService {
     this.http.post(`${environment.api}/authenticate`, user, {withCredentials: true}).subscribe((json:any) => {
     token = json['id_token'];
     window.localStorage.setItem('token',token);
-  })
+  }, erro => {
+    alert('usuário ou senha não conferem.')
+    }
+  )
   }
 
   access() {
@@ -33,7 +36,14 @@ export class AccountService {
   }
 
   async createAccount(account: any) {
-    const result = await this.http.post<any>(`${environment.api}/register`, account).subscribe();
+    const result = this.http.post<any>(`${environment.api}/register`, account).subscribe(
+      resultado => {
+        console.log(resultado);
+        alert('Cadrastro realizado');
+      },
+      () => {
+          alert('Ocorreu um erro. Favor, conferir se os campos.');
+      });
     return result;
   }
 

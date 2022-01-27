@@ -16,6 +16,7 @@ import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.comp
 import { SaleComponent } from './layout/sale/sale.component';
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
+import { SaleListComponent } from './layout/sale-list/sale-list.component';
 registerLocaleData(ptBr)
 
 
@@ -31,7 +32,8 @@ registerLocaleData(ptBr)
     BaseComponent,
     AddProductComponent,
     PurchaseItemComponent,
-    SaleComponent
+    SaleComponent,
+    SaleListComponent
   ],
   imports: [
     BrowserModule,

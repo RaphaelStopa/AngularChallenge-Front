@@ -1,0 +1,25 @@
+<div id="empty" *ngIf="purchaseItems?.length === 0">
+  Seu histórico é vario.
+  </div>
+
+
+<div id="base" *ngIf="purchaseItems?.length !== 0">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Data</th>
+            <th>Valor</th>
+            <th>Cep de entrega</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let purchase of purchaseItems">
+            <td>{{purchase.date | date: 'dd/MM/yyyy'}}</td>
+            <td>{{purchase.value | currency:'BRL'}}</td>
+            <td>{{purchase.cep}}</td>
+        </tr>
+        <tbody>
+    </table>
+</div>
+
+

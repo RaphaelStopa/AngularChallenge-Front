@@ -25,8 +25,7 @@ export class LoginComponent implements OnInit {
       await new Promise(r => setTimeout(r, 2000));
       this.router.navigate(['']);
     } catch (error){
-      console.log("ddddddddd")
-      // console.error(error);
+      console.error(error);
     }
   }
 }

@@ -22,9 +22,11 @@ export class SaleService {
     return this.http.get<any>(`${environment.api}/sales-total`);
   }
 
-  // public getValidateZipCode(code: string): Observable<any> {
-  //   return this.http.get<any>(`${environment.api}/sales-total/{code}`).subscribe();
-  // }
+
+  public getAll(): Observable<any> {
+    return this.http.get<any>(`${environment.api}/sales`);
+  }
+
 
    getValidateZipCode(code: string) {
     const result = this.http.get<any>(`${environment.api}/sales-cep/${code}`);

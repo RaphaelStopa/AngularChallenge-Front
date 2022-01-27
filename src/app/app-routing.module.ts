@@ -1,3 +1,4 @@
+import { SaleListComponent } from './layout/sale-list/sale-list.component';
 import { SaleComponent } from './layout/sale/sale.component';
 import { AddProductComponent } from './layout/add-product/add-product.component';
 import { PurchaseItemComponent } from './layout/purchase-item/purchase-item.component';
@@ -14,8 +15,7 @@ const routes: Routes = [
   {path:'', component: BaseComponent, children:[
     {path: '', component: PoliticalComponent},
     {path: 'add-produtos', component: AddProductComponent},
-    // {path: 'edit-politico/:id', component: EditPoliticalComponent},
-    // {path: 'carrinho', component: SaleComponent},
+    {path: 'historico', component: SaleListComponent},
     {path: 'carrinho', component: PurchaseItemComponent},
 
   ],

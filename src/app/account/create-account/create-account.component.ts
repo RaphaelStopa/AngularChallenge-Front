@@ -24,8 +24,6 @@ export class CreateAccountComponent implements OnInit {
   async onSubmit() {
     try{
       await this.accountService.createAccount(this.account);
-      alert("Conta criada.");
-      this.router.navigate(['/login']);
     }catch (error) {
       alert("Parece que houve um erro. Verifique os campos.");
       console.error(error);
