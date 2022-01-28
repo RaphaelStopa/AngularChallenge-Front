@@ -32,7 +32,6 @@ export class AddProductComponent implements OnInit {
   }
 
   async onUpload() {
-
     const uploadImageData = new FormData();
     uploadImageData.append('imageFile', this.selectedFile, this.selectedFile.name);
     uploadImageData.append('name', this.product.name);

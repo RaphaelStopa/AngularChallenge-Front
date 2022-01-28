@@ -22,4 +22,8 @@ O token de acesso tem sua data de expiração validada. Se o projeto identifica 
 
 O excedente do desafio, a validação de CEP, é obviamente feita no BackEnd, por questões obvias de segurança.
 
+*****************************
+
+falta blouquear a pagina de cadrastro de itens para u user comum
+
 
