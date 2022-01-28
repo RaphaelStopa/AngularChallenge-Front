@@ -6,7 +6,6 @@
       <input type="text" id="descrição" class="fadeIn" name="descrição" placeholder="descrição" [(ngModel)]="product.description" required>
       <input  id="preço unitário" class="fadeIn" name="preço unitário" placeholder="preço unitário" type="number" min="0.01" step="0.01" [(ngModel)]="product.unitPrice" required>
       <input  id="descrição" class="fadeIn" name="descrição" placeholder="numero em estoque" min="1" type="number" [(ngModel)]="product.quantityStock" required>
-
       <div id="title">Selecione a unidade de medida:</div>
       <select name="cars" id="cars" [(ngModel)]="product.unitMeasurement" required>
         <option value="KG">Quilo</option>
