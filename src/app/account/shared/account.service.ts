@@ -47,6 +47,12 @@ export class AccountService {
     return result;
   }
 
+  getAuth() {
+    const token = window.localStorage.getItem('token');
+    const decoded: any = jwtDecode(token);
+    return decoded.auth
+  }
+
   getAuthorizationToken(){
     const token = window.localStorage.getItem('token');
     return token;

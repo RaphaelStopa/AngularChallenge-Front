@@ -1,6 +1,6 @@
 <div class="master">
 <div class="add">
-<button class="btn2" [routerLink]="['/add-produtos']">Adicionar produtos</button>
+<button class="btn2"*ngIf="auth === 'ROLE_ADMIN'" [routerLink]="['/add-produtos']">Adicionar produtos</button>
 <div *ngIf="products">
  <div class="geral">
  <div class="container" *ngFor="let  product of products">
